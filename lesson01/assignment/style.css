@@ -1,3 +1,9 @@
 .main {
     padding: 2rem
 }
+
+.input-set {
+    display: flex;
+    flex-direction: column;
+    max-width: 10em;
+}
