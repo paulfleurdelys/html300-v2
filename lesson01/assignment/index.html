@@ -18,14 +18,36 @@
 
 <body>
     <main class="main">
-        <h1>Using ES6+ Methods</h1>
+        <h1>Enter the Daily Temperatures</h1>
         <section class="input-set">
             <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
+            <label for="monday">Monday Temperature</label>
+            <input type="text" class="input" id="monday">
+            <label for="tuesday">Tuesday Temperature</label>
+            <input type="text" class="input" id="tuesday">
+            <label for="wednesday">Wednesday Temperature</label>
+            <input type="text" class="input" id="wednesday">
+            <label for="thursday">Thursday Temperature</label>
+            <input type="text" class="input" id="thursday">
+            <label for="friday">Friday Temperature</label>
+            <input type="text" class="input" id="friday">
+        </section><br><br>
+
+        <section class = "input-buttons">
+
             <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
+            <p class="markup">Combine all weekly temperatures to a single total temperature for the week with reduce function: <span id="reduceResult"></span></p>
+            <input class="submit" type="submit" id="reduce" value="Combine With Reduce"></input>
+            <p class="markup">Remove temperatures that are under 80 using the filter function: <span id="filterResult"></span></p>
+            <input class="submit" type="submit" id="filter" value="Filter Under 80"></input>
+            <p class="markup">Convert fahrenheit temperatures to celsius temperatures using map function: <span id="mapResult"></span></p>
+            <input class="submit" type="submit" id="map" value="Map to Celsius"></input>
+            <p class="markup">Tell us if it was a hot week by returning true if every daily temperature was above 80 using the every function: <span id="everyResult"></span></p>
+            <input class="submit" type="submit" id="every" value="Every Value Above 80"></input>
+            <p class="markup">Tell us if there was a single hot day by returning true if any daily temperature was above 80 using the some function: <span id="someResult"></span></p>
+            <input class="submit" type="submit" id="some" value="Some Values Above 80"></input>
+            <p class="markup">Tell us if there was a day where the temperature was exactly 80 by returning that temperature using the find function: <span id="findResult"></span></p>
+            <input class="submit" type="submit" id="find" value="Find exactly 80"></input>
         </section>
        
         
