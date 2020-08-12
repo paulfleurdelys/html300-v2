@@ -1,0 +1,21 @@
+.full-card {
+    background-color: $white;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 847px;
+    padding: 42px;
+}
+
+.linkedin-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.linkedin-text {
+    padding-left: 1rem;
+    color: $cardtextgray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}

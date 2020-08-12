@@ -8,10 +8,25 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.outer-card-gray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 951px;
+    height: 474px;
+    background-color: $outercardfillgray;
 }
 
-h1 {
-    color: $red;  
+.image {
+  width: 225px;
+  height: 225px;
+  background-image: url("/img/unsplash-headshot.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.text-bold {
+    font-weight: bold;
 }
