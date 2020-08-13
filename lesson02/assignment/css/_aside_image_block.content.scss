@@ -1,3 +1,5 @@
+@import 'article_block.content';
+
 aside {
   width: 225px;
   margin: auto;
@@ -23,9 +25,7 @@ aside {
 }
 
 .job-title-text {
-  color: $cardtextgray;
-  font-size: $fontsize;
   font-style: italic;
-  font-family: $fontfamily;
   text-align: center;
+  @include text-styles;
 }

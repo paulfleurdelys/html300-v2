@@ -1,3 +1,11 @@
+@import 'components.content';
+
+@mixin text-styles {
+    color: $cardtextgray;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+}
+
 article{
     display: flex;
     flex-direction: column;
@@ -9,9 +17,7 @@ article{
 }
 
 .description-block-text {
-    color: $cardtextgray;
-    font-size: $fontsize;
-    font-family: $fontfamily;
+    @include text-styles;
     margin: .5em 0;
 }
 
@@ -22,15 +28,12 @@ article{
 }
 
 .linkedin-container {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     align-items: center;
     margin: .5em 0;
 
     span {
         padding-left: 1rem;
-        color: $cardtextgray;
-        font-size: $fontsize;
-        font-family: $fontfamily;
+        @include text-styles;
     }
 }

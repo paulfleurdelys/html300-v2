@@ -1,3 +1,8 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -20,10 +25,9 @@ main {
     section {
         background-color: $white;
         margin: auto;
-        display: flex;
-        flex-direction: row;
         width: 847px;
         padding: 42px;
+        @include flex-row;
     }
 }
 
