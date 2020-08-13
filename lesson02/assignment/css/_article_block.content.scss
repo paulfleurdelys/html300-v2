@@ -1,11 +1,14 @@
 @import 'components.content';
 
+//This is a partial file for all the elements in the article block.
+
 @mixin text-styles {
     color: $cardtextgray;
     font-size: $fontsize;
     font-family: $fontfamily;
 }
 
+//Uses flex column to arrange each text line.
 article{
     display: flex;
     flex-direction: column;
@@ -16,6 +19,7 @@ article{
     margin: auto;
 }
 
+//Individual text elements use recurring styles in the text-styles mixin.
 .description-block-text {
     @include text-styles;
     margin: .5em 0;
@@ -27,6 +31,7 @@ article{
     }
 }
 
+//Container for the line which has the linkedin svg logo and the text.  Uses 2 mixins.
 .linkedin-container {
     @include flex-row;
     align-items: center;
