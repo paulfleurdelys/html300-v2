@@ -1,0 +1,36 @@
+article{
+    display: flex;
+    flex-direction: column;
+    background-color: $innercardfillgray;
+    padding: 1em;
+    width: 500px;
+    height: 309px;
+    margin: auto;
+}
+
+.description-block-text {
+    color: $cardtextgray;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+    margin: .5em 0;
+}
+
+.description-block-text {
+    span {
+        font-weight: bold;
+    }
+}
+
+.linkedin-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5em 0;
+
+    span {
+        padding-left: 1rem;
+        color: $cardtextgray;
+        font-size: $fontsize;
+        font-family: $fontfamily;
+    }
+}
