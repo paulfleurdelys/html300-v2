@@ -4,6 +4,7 @@
     background-color: $innercardfillgray;
     padding: 1em;
     width: 500px;
+    height: 309px;
     margin: auto;
 }
 
@@ -29,8 +30,9 @@
     font-size: 26px;
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif;
-    margin: .5em 0;
     text-align: center;
+    margin-top: 1em;
+    margin-bottom: .5rem;
 }
 
 .job-title-text {
@@ -38,6 +40,19 @@
     font-size: 20px;
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
     text-align: center;
+}
+
+.linkedin-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5em 0;
+}
+
+.linkedin-text {
+    padding-left: 1rem;
+    color: $cardtextgray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
