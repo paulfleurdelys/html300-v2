@@ -1,4 +1,5 @@
-[
+//Changed file type to .js and put the JSON in a variable to make accessible to other script.
+const dataFile = [
   {
     "name": "Steve Smith",
     "jobTitle": "Project Manage",

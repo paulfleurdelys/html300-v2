@@ -1,3 +1,9 @@
+//Basic flex-row mixin sets flex display layout and row direction.  Used in 2 elements in this component.
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -8,10 +14,22 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+//Styles for the two outer container blocks, the inner block uses the flex-row mixin.
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 951px;
+    height: 474px;
+    background-color: $outercardfillgray;
+
+    section {
+        background-color: $white;
+        margin: auto;
+        width: 847px;
+        padding: 42px;
+        @include flex-row;
+    }
 }
 
-h1 {
-    color: $red;  
-}
