@@ -1,0 +1,35 @@
+//This is a partial file for all the elements in the aside block.
+
+//imports the article_block file to bring in the text-styles mixin.
+@import 'article_block.content';
+
+aside {
+  width: 225px;
+  margin: auto;
+  //The image of a headshot uses the border radius to round the image placed on the div background.
+  .image {
+      width: 100%;
+      height: 225px;
+      background-image: url("/img/unsplash-headshot.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+  }
+}
+
+.name-text {
+  color: $cardtextgray;
+  font-size: 26px;
+  font-weight:bold;
+  font-family: $fontfamily;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: .5rem;
+}
+
+// This uses the text-styles mixin from the article_block partial file.
+.job-title-text {
+  font-style: italic;
+  text-align: center;
+  @include text-styles;
+}
