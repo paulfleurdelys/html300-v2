@@ -1,0 +1,42 @@
+@mixin nav-transparent-hover {
+    background-color: rgba(0, 0, 0, .6);
+    color: $jellybeanred;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 1em;
+    transition: all ease 0.6s;
+}
+
+
+nav ul li a:hover {
+    @include nav-transparent-hover;
+}
+
+.jumbotron {
+    background: url('../static/bar-839577_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+}

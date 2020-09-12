@@ -1,0 +1,46 @@
+@import 'nav_menu';
+
+@mixin background-hover {
+    background-color: $pastelred;
+    transition: background-color 1000ms linear;
+}
+
+.main {
+    background-color: $eggshellwhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+}
+
+.menu-add-button {
+    position: relative;
+    z-index: 2;
+    bottom: 5em;
+    width: 50px;
+    text-align: center;
+    color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 2px;
+    padding: 1em;
+    &:hover {
+        @include nav-transparent-hover;
+        color: #ffffff;
+    }
+}
+
+img {
+    max-width: 100%;
+    transition: all 1s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
