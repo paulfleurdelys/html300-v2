@@ -1,8 +1,11 @@
 @import 'nav_menu';
 
-@mixin background-hover {
-    background-color: $pastelred;
-    transition: background-color 1000ms linear;
+/* Scale image mixin takes the scale ratio as a parameter*/
+@mixin scale-image($scale-value) {
+    transition: all ease-in 1s;
+    &:hover {
+        transform: scale($scale-value);
+    }
 }
 
 .main {
@@ -11,6 +14,7 @@
     flex-direction: column;
 }
 
+/* Align menu images on center column */
 .menu {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,7 @@
     justify-items: center;
 }
 
+/* Uses nav-transparent-hover mixin to add opacity transition on curosr hover*/
 .menu-add-button {
     position: relative;
     z-index: 2;
@@ -32,15 +37,13 @@
     border-radius: 2px;
     padding: 1em;
     &:hover {
-        @include nav-transparent-hover;
-        color: #ffffff;
+        @include nav-transparent-hover(0.5, #ffffff);
     }
 }
 
+/* Uses scale image mixin to grow image on cursor hover */
+
 img {
-    max-width: 100%;
-    transition: all 1s;
-    &:hover {
-        transform: scale(1.1);
-    }
+    max-width: 30%;
+    @include scale-image(1.1);
 }

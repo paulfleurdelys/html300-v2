@@ -1,7 +1,11 @@
-@mixin nav-transparent-hover {
-    background-color: rgba(0, 0, 0, .6);
-    color: $jellybeanred;
+/* Mixin takes in parameter for opacity and the color*/
+
+@mixin nav-transparent-hover($opacity, $color) {
+    background-color: rgba(0, 0, 0, $opacity);
+    color: $color;
 }
+
+/* Sets base opacity of background on nav bar */
 
 nav {
     background-color: rgba(0, 0, 0, 0.2);
@@ -12,10 +16,15 @@ nav ul {
     text-align: center;
 }
 
+/* Remove list styling, set as inline block elements */
+
 nav ul li {
     list-style: none;
     display: inline-block;
 }
+
+/* Original source of menu css and transition code example: 
+https://www.youtube.com/watch?v=eQ5SU6UN46w*/
 
 nav ul li a {
     display: block;
@@ -32,7 +41,7 @@ nav ul li a {
 
 
 nav ul li a:hover {
-    @include nav-transparent-hover;
+    @include nav-transparent-hover(0.4, $jellybeanred);
 }
 
 .jumbotron {
