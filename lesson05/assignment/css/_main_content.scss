@@ -1,0 +1,44 @@
+@import 'layouts';
+@import 'nav_menu';
+
+.main__menu-list {
+    background-color: $eggshellwhite;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main__menu-item {
+    width: 225px;
+    padding: 1em;
+    img {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+}
+
+/* Uses nav-transparent-hover mixin to add opacity transition on curosr hover*/
+.main__menu-add-button {
+    position: relative;
+    z-index: 2;
+    bottom: 5em;
+    width: 50px;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 2px;
+    padding: 1em;
+    &:hover {
+        @include nav-transparent-hover(0.5, #ffffff);
+    }
+}
+
+.aside__sidebar {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
