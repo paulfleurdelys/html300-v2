@@ -1,6 +1,0 @@
-/* Mixins for standard flexbox-column layout*/
-
-@mixin flexbox-column() {
-    display: flexbox;
-    flex-flow: column wrap;
-}

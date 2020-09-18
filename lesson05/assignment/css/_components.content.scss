@@ -2,10 +2,17 @@ html {
     box-sizing: border-box;
 }
 
+/* Two CSS grid layouts, 1 column for narrow devices*/
 body {
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 0.5fr;
+    @media (min-width: $tabletbreakpoint) {
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    @media (max-width: $tabletbreakpoint) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;;
+    }
 }
 
 *,
