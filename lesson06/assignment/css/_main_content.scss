@@ -1,0 +1,139 @@
+@import 'header_content';
+
+/* Include font-mix as mixin*/
+@mixin font-mix() {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+main {
+    padding: 3em;
+}
+
+aside {
+    padding: 3em;
+}
+
+/* Divider block is the large white with black text section mid-pages*/
+.divider-block {
+    background-color: white;
+    height: 500px;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding: 5%;
+    h1 {
+        @include font-mix();
+        color: black;
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: 4px;
+    }
+    p {
+        @include font-mix();
+        color: black;
+        text-align: center;
+    }
+}
+
+/* Jumbotron is the large image with white text section mid-page*/
+.jumbotron {
+    background: url('../static/teapots-1858601_960_720.jpg') no-repeat;
+    background-size: cover;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    height: 500px;
+    h1 {
+        @include font-mix();
+        color: white;
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: 4px;
+        position: relative;
+        top: 30%;
+    }
+}
+
+/* Wrapper container to set heading apart from article image cards*/
+.main__primary-container {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    background-color: $eggshellwhite;
+    @include font-mix();
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Wrap menu food cards on row axis*/
+.main__menu-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* CSS for individual menu item image cards*/
+.main__menu-item {
+    width: 250px;
+    padding: 1em;
+    img {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+}
+
+/* Uses nav-transparent-hover mixin to add opacity transition on curosr hover*/
+.main__menu-add-button {
+    position: relative;
+    z-index: 2;
+    bottom: 2.5em;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 12px;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.3);
+    &:hover {
+        @include nav-transparent-hover(0.8, #ffffff);
+    }
+}
+
+/* Aside sidebar switches grid-row at the tabletbreakpoint size for responsive design*/
+.aside__sidebar {
+    @media (min-width: $tabletbreakpoint) {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+    @media (max-width: $tabletbreakpoint) {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: repeat(10 1fr);
+    padding: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+/* Use CSS grid not flex for precise alignment of the text along vertical/horizonal axes*/
+.aside__menu-item {
+    grid-column: 1 / 2;
+    &__bold {
+        font-weight: 600;
+    }
+}
+
+.aside__menu-price {
+    grid-column: 2 / 3;
+}
