@@ -3,6 +3,7 @@ html {
 }
 
 /* Two CSS grid layouts, 1 column for narrow devices*/
+/*
 body {
     display: grid;
     @media (min-width: $tabletbreakpoint) {
@@ -13,7 +14,7 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;;
     }
-}
+}*/
 
 *,
 *:after,

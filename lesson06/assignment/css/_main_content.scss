@@ -20,8 +20,6 @@ aside {
 .divider-block {
     background-color: white;
     height: 500px;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
     padding: 5%;
     h1 {
         @include font-mix();
@@ -42,32 +40,10 @@ aside {
     background-size: cover;
 }
 
-/* Jumbotron is the large image with white text section mid-page
-.jumbotron {
-    background: url('../static/teapots-1858601_960_720.jpg') no-repeat;
-    background-size: cover;
-    grid-row: 3 / 4;
-    grid-column: 1 / 3;
-    height: 500px;
-    h1 {
-        @include font-mix();
-        color: white;
-        text-align: center;
-        font-size: 60px;
-        letter-spacing: 4px;
-        position: relative;
-        top: 30%;
-    }
-}
-*/
-
 /* Wrapper container to set heading apart from article image cards*/
 .main__primary-container {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
     background-color: $eggshellwhite;
     @include font-mix();
-
     h1 {
         text-align: center;
     }
@@ -113,14 +89,6 @@ aside {
 
 /* Aside sidebar switches grid-row at the tabletbreakpoint size for responsive design*/
 .aside__sidebar {
-    @media (min-width: $tabletbreakpoint) {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-    }
-    @media (max-width: $tabletbreakpoint) {
-        grid-row: 5 / 6;
-        grid-column: 1 / 2;
-    }
     display: grid;
     grid-template-columns: 1fr 20px;
     grid-template-rows: repeat(10 1fr);
