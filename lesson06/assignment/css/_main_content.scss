@@ -37,7 +37,12 @@ aside {
     }
 }
 
-/* Jumbotron is the large image with white text section mid-page*/
+.jumbotron {
+    background: url('../static/teapots-1858601_960_720.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* Jumbotron is the large image with white text section mid-page
 .jumbotron {
     background: url('../static/teapots-1858601_960_720.jpg') no-repeat;
     background-size: cover;
@@ -54,6 +59,7 @@ aside {
         top: 30%;
     }
 }
+*/
 
 /* Wrapper container to set heading apart from article image cards*/
 .main__primary-container {
