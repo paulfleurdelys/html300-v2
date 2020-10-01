@@ -35,9 +35,21 @@ aside {
     }
 }
 
-.jumbotron {
+.bg-home {
+    background: url('../static/kitchen-731351_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.bg-about {
     background: url('../static/teapots-1858601_960_720.jpg') no-repeat;
     background-size: cover;
+}
+
+.bg-space {
+    background: url('../static/soup-pot-1090137_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 400px;
 }
 
 /* Wrapper container to set heading apart from article image cards*/
@@ -58,13 +70,19 @@ aside {
 
 /* CSS for individual menu item image cards*/
 .main__menu-item {
-    width: 250px;
+    width: 200px;
     padding: 1em;
     img {
         width: 100%;
         margin: auto;
         display: block;
     }
+}
+
+.card-text {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-transform: lowercase;
 }
 
 /* Uses nav-transparent-hover mixin to add opacity transition on curosr hover*/
@@ -91,13 +109,12 @@ aside {
 .aside__sidebar {
     display: grid;
     grid-template-columns: 1fr 20px;
-    grid-template-rows: repeat(10 1fr);
-    padding: 3em;
+    grid-template-rows: 120px repeat(7, 100px) 1fr;
+    padding: 2em;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
-    
 }
 
 /* Use CSS grid not flex for precise alignment of the text along vertical/horizonal axes*/
