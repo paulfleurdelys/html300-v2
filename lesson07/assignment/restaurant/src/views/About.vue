@@ -1,14 +1,25 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Nav />
+    <TextSection heading="About our restaurant" />
+    <Jumbotron msg="Inspired Experience" />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Jumbotron from '@/components/Jumbotron.vue'
+import TextSection from '@/components/TextSection.vue'
+import Nav from '@/components/Nav.vue'
+import Footer from '@/components/Footer.vue'
 
-export default {
+export default {  
   name: 'About',
   components: {
+    Jumbotron,
+    TextSection,
+    Nav,
+    Footer
   }
 }
 </script>

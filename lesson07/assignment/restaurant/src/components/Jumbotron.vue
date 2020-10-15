@@ -8,6 +8,7 @@
 export default {
   name: 'Jumbotron',
   props: {
+    heading: String,
     msg: String
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Nav />
-    <TextSection />
+    <TextSection heading="Chef Talent" />
     <Jumbotron msg="Culinary Excellence" />
     <main>
       <Accordion />

@@ -3,20 +3,37 @@
     <header>
                    <!-- Navbar light with minor CSS remaining from lesson05-->
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><router-link to="/" class="nav-link text-light">home</router-link></li>
-            <li class="nav-item"><router-link to="/space" class="nav-link text-light">our space</router-link></li>
-            <li class="nav-item"><a class="nav-link text-light" href="./order.html">order</a></li>
-            <li class="nav-item"><router-link to="/about" class="nav-link text-light">about</router-link>about</li>
-            <li class="nav-item"><a class="nav-link text-light" href="">locations</a></li>
-        </ul></nav>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <ul class="navbar-nav mr-auto">
+            <NavLink 
+                v-for="link in links" 
+                v-bind:key="link.id"
+                v-bind:url="link.url" 
+                v-bind:linkText="link.linkText" />
+        </ul>
+    </nav>
     </header>
 </template>
 
 <script>
+import NavLink from '@/components/NavLink.vue'
+
 export default {
   name: 'Nav',
-  props: {}
+  components: {
+    NavLink
+  },
+  props: {},
+    data() {
+    return { links:
+      [
+          {id: 1, url: "/", linkText: "home"},
+          {id: 2, url: "/space", linkText: "our space"},
+          {id: 3, url: "/order", linkText: "order"},
+          {id: 4, url: "/about", linkText: "about"},
+          {id: 5, url: "/locations", linkText: "locations"}
+      ]
+    }
+    }
 }
 </script>
