@@ -210,6 +210,7 @@ aside {
     display: grid;
     grid-template-columns: 1fr 20px;
     grid-template-rows: 120px repeat(7, 100px) 1fr;
+    column-gap: 1em;
     padding: 2em;
     text-decoration: none;
     text-transform: uppercase;

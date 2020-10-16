@@ -7,6 +7,10 @@
 <script>
 export default {
   name: 'CarouselItem',
-  props: { imageSrc: String, alt: String, title: String }
+  props: { 
+    imageSrc: String, 
+    alt: String, 
+    title: String 
+    }
 }
 </script>
