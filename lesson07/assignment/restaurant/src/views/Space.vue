@@ -2,10 +2,10 @@
   <div class="space">
     <Nav />
     <ImageSection />
-    <TextSection heading="OUR DINING ROOM AND EVENT AREA"/>
-    <Jumbotron classObject="bgSpace" msg="Unique Spaces For Your Occasion Or Event" />
+    <Jumbotron classObject="bgWhite" heading="OUR DINING ROOM AND EVENT AREA" msg="CRAS MATTIS CONSECTETUR PURUS SIT AMET FERMENTUM. SED POSUERE CONSECTETUR EST AT LOBORTIS. CRAS JUSTO ODIO, DAPIBUS AC FACILISIS IN, EGESTAS EGET QUAM. SED POSUERE CONSECTETUR EST AT LOBORTIS. MAECENAS FAUCIBUS MOLLIS INTERDUM. NULLA VITAE ELIT LIBERO A PHARETRA." />
+    <Jumbotron classObject="bgSpace" textClass="text-white" heading="Unique Spaces For Your Occasion Or Event" />
     <main>
-      <Carousel />
+      <BVCarousel />
     </main>
     <Footer />
   </div>
@@ -15,8 +15,7 @@
 // @ is an alias to /src
 import Jumbotron from '@/components/Jumbotron.vue'
 import ImageSection from '@/components/ImageSection.vue'
-import TextSection from '@/components/TextSection.vue'
-import Carousel from '@/components/Carousel.vue'
+import BVCarousel from '@/components/BVCarousel.vue'
 import Nav from '@/components/Nav.vue'
 import Footer from '@/components/Footer.vue'
 
@@ -25,8 +24,7 @@ export default {
   components: {
     Jumbotron,
     ImageSection,
-    TextSection,
-    Carousel,
+    BVCarousel,
     Nav,
     Footer
   }

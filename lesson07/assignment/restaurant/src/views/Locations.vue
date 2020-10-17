@@ -1,14 +1,19 @@
 <template>
   <div class="locations">
-    <h1>This is the location</h1>
+    <Nav />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Locations',
   components: {
+    Nav,
+    Footer
   }
 }
 </script>

@@ -22,6 +22,13 @@ $tabletbreakpoint: 768px;
     color: $color;
 }
 
+@mixin font-mix() {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
 /* Sets base opacity of background on nav bar */
 header {
     background: url('./assets/bar-839577_960_720.jpg') no-repeat;
@@ -117,7 +124,7 @@ aside {
 }
 
 /* Divider block is the large white with black text section mid-pages*/
-.divider-block {
+.bgWhite {
     background-color: white;
     height: 500px;
     padding: 5%;
@@ -135,25 +142,25 @@ aside {
     }
 }
 
-.jumbotron {
-    background-size: cover;
-}
-
 .bgHome {
     background: url('./assets/kitchen-731351_960_720.jpg') no-repeat;
     background-size: cover;
-
+    height: 400px;
+    padding: 5%;
 }
 
 .bgAbout {
     background: url('./assets/teapots-1858601_960_720.jpg') no-repeat;
     background-size: cover;
+    height: 400px;
+    padding: 5%;
 }
 
 .bgSpace {
     background: url('./assets/soup-pot-1090137_960_720.jpg') no-repeat;
     background-size: cover;
     height: 400px;
+    padding: 5%;
 }
 
 /* Wrapper container to set heading apart from article image cards*/

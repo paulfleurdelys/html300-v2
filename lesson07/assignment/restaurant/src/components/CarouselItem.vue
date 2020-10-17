@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel-item">
+  <div class="carousel-item active" >
     <img class="d-block w-100" v-bind:src= "require('../assets/' + imageSrc)" v-bind:alt="alt"  data-toggle="tooltip" data-placement="top" v-bind:title="title">
   </div>
 </template>

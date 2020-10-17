@@ -4,8 +4,6 @@
           <img v-for="image in images" 
           v-bind:key="image.id"
           v-bind:src= "require('../assets/' + image.imageSrc)" />
-          <img src="../assets/chef-1209161_960_720.jpg" class="img-fluid rounded my-3 mx-auto d-block" alt="Sushi chef">
-          <img src="../assets/chef-4807317_960_720.jpg" class="img-fluid rounded mx-auto d-block" alt="Japanese chef">
         </section>
 </template>
 
