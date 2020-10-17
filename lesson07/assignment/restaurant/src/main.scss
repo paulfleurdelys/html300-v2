@@ -135,18 +135,22 @@ aside {
     }
 }
 
-.bg-home {
-    background: url('./assets/kitchen-731351_960_720.jpg') no-repeat;
+.jumbotron {
     background-size: cover;
-    height: 500px;
 }
 
-.bg-about {
+.bgHome {
+    background: url('./assets/kitchen-731351_960_720.jpg') no-repeat;
+    background-size: cover;
+
+}
+
+.bgAbout {
     background: url('./assets/teapots-1858601_960_720.jpg') no-repeat;
     background-size: cover;
 }
 
-.bg-space {
+.bgSpace {
     background: url('./assets/soup-pot-1090137_960_720.jpg') no-repeat;
     background-size: cover;
     height: 400px;

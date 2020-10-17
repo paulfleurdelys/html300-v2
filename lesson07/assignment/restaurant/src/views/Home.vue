@@ -2,7 +2,7 @@
   <div class="home">
     <Nav />
     <TextSection heading="Chef Talent" />
-    <Jumbotron msg="Culinary Excellence" />
+    <Jumbotron classObject="bgHome"  msg="Culinary Excellence" />
     <main>
       <Accordion />
     </main>
@@ -29,3 +29,5 @@ export default {
   }
 }
 </script>
+
+

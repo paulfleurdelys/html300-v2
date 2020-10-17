@@ -2,8 +2,8 @@
   <div class="space">
     <Nav />
     <ImageSection />
-    <TextSection />
-    <Jumbotron msg="Culinary Excellence" />
+    <TextSection heading="OUR DINING ROOM AND EVENT AREA"/>
+    <Jumbotron classObject="bgSpace" msg="Unique Spaces For Your Occasion Or Event" />
     <main>
       <Carousel />
     </main>

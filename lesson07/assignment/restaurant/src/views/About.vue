@@ -2,7 +2,7 @@
   <div class="about">
     <Nav />
     <TextSection heading="About our restaurant" />
-    <Jumbotron msg="Inspired Experience" />
+    <Jumbotron classObject= "bgAbout" msg="Inspired Experience" />
     <Footer />
   </div>
 </template>
