@@ -1,0 +1,242 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+// Colors
+$eggshellwhite: #EAE7DC;
+$darkvanilla: #D8C3A5;
+$taupegray: #8E8D8A;
+$pastelred: #E98074;
+$jellybeanred: #E85A4F;
+
+//Font attributes
+$fontsize: 20px;
+$fontfamily: 'Raleway', sans-serif;
+
+//Media breakpoints
+$tabletbreakpoint: 768px;
+
+/* Mixin takes in parameter for opacity and the color*/
+
+@mixin nav-transparent-hover($opacity, $color) {
+    background-color: rgba(0, 0, 0, $opacity);
+    color: $color;
+}
+
+@mixin font-mix() {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Sets base opacity of background on nav bar */
+header {
+    background: url('./assets/bar-839577_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+    
+    nav {
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 2px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+}
+
+footer {
+    background: url('./assets/china-1031557_960_720.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    
+    /* Changes the flexbox from row to column below the tablet breakpoint*/
+    @media (min-width: $tabletbreakpoint) {
+        font-family: $fontfamily;
+        display: flex;
+        flex-flow: row nowrap;   
+        height: 200px; 
+    }
+    @media (max-width: $tabletbreakpoint) {
+        font-family: $fontfamily;
+        display: flex;
+        flex-flow: column;
+        align-items: center;   
+    }
+}
+
+/* Align items on column, center when within footer's block container */
+.footer__block {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 33%;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+
+    /* Sets minor box shadow, changes font to black */
+    input[type=email] {
+        box-shadow: 0 0 3px;
+        height: 2rem;
+        color: black;
+    }
+    /* Sets submit button background to white, uses page font */
+    input[type=submit] {
+        color: black;
+        margin-left: 0.5rem;
+        padding: 0 1rem;
+        height: 2rem;
+        border: none;
+        background: white;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        text-decoration: underline;
+    }
+}
+
+
+/* Include font-mix as mixin*/
+@mixin font-mix() {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+main {
+    padding: 3em;
+}
+
+aside {
+    padding: 3em;
+}
+
+/* Divider block is the large white with black text section mid-pages*/
+.bgWhite {
+    background-color: white;
+    height: 500px;
+    padding: 5%;
+    h1 {
+        @include font-mix();
+        color: black;
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: 4px;
+    }
+    p {
+        @include font-mix();
+        color: black;
+        text-align: center;
+    }
+}
+
+.bgHome {
+    background: url('./assets/kitchen-731351_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 5%;
+}
+
+.bgAbout {
+    background: url('./assets/teapots-1858601_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 5%;
+}
+
+.bgSpace {
+    background: url('./assets/soup-pot-1090137_960_720.jpg') no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 5%;
+}
+
+/* Wrapper container to set heading apart from article image cards*/
+.main__primary-container {
+    background-color: $eggshellwhite;
+    @include font-mix();
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Wrap menu food cards on row axis*/
+.main__menu-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* CSS for individual menu item image cards*/
+.main__menu-item {
+    width: 200px;
+    padding: 1em;
+    img {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+}
+
+.card-text {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+/* Uses nav-transparent-hover mixin to add opacity transition on curosr hover*/
+.main__menu-add-button {
+    position: relative;
+    z-index: 2;
+    bottom: 2.5em;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 12px;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.3);
+    &:hover {
+        @include nav-transparent-hover(0.8, #ffffff);
+    }
+}
+
+/* Aside sidebar switches grid-row at the tabletbreakpoint size for responsive design*/
+.aside__sidebar {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: 120px repeat(7, 100px) 1fr;
+    column-gap: 1em;
+    padding: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Use CSS grid not flex for precise alignment of the text along vertical/horizonal axes*/
+.aside__menu-item {
+    grid-column: 1 / 2;
+    &__bold {
+        font-weight: 600;
+    }
+}
+
+.aside__menu-price {
+    grid-column: 2 / 3;
+}
