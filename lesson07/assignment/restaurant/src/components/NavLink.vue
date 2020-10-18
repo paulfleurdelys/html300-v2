@@ -8,6 +8,8 @@
 <script>
 export default {
   name: 'NavLink',
-  props: { url: String, linkText: String }
+  props: { 
+    url: String, 
+    linkText: String }
 }
 </script>

@@ -1,4 +1,5 @@
 <template>
+ <!-- Uses require and string + var concatenation to render the url correctly in the v-bind statement -->
   <div class="card m-2" style="width: 18rem;">
     <img v-bind:src= "require('../assets/' + imageSrc)" class="card-img-top" alt="...">
     <div class="card-body">

@@ -1,8 +1,7 @@
 
 <template>
+<!-- Generates links from array, uses navbar bootstrap classes -->
     <header>
-                   <!-- Navbar light with minor CSS remaining from lesson05-->
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <ul class="navbar-nav mr-auto">
             <NavLink 

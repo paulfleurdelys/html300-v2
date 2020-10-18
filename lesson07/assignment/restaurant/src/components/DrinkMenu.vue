@@ -1,4 +1,5 @@
 <template>
+ <!-- Fills out a v-for on a template to render two elements, article and section, into the menu correctly -->
   <aside class="aside__sidebar col-sm-12 col-md-3 col-xl-4">
     <h1>Cocktails</h1>
   <template v-for="item in items">

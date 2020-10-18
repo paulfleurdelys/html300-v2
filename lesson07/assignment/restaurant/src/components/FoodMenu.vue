@@ -1,4 +1,5 @@
 <template>
+ <!-- Fills out and binds attributes from the object array to FoodMenuItem components -->
             <main class="main__primary-container col-sm-12 col-md-9 col-xl-8">
             <h1>Food</h1> 
               <section class="main__menu-list"> 

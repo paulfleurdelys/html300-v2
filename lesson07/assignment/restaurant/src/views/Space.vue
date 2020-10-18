@@ -5,7 +5,7 @@
     <Jumbotron classObject="bgWhite" heading="OUR DINING ROOM AND EVENT AREA" msg="CRAS MATTIS CONSECTETUR PURUS SIT AMET FERMENTUM. SED POSUERE CONSECTETUR EST AT LOBORTIS. CRAS JUSTO ODIO, DAPIBUS AC FACILISIS IN, EGESTAS EGET QUAM. SED POSUERE CONSECTETUR EST AT LOBORTIS. MAECENAS FAUCIBUS MOLLIS INTERDUM. NULLA VITAE ELIT LIBERO A PHARETRA." />
     <Jumbotron classObject="bgSpace" textClass="text-white" heading="Unique Spaces For Your Occasion Or Event" />
     <main>
-      <BVCarousel />
+      <Carousel />
     </main>
     <Footer />
   </div>
@@ -15,7 +15,7 @@
 // @ is an alias to /src
 import Jumbotron from '@/components/Jumbotron.vue'
 import ImageSection from '@/components/ImageSection.vue'
-import BVCarousel from '@/components/BVCarousel.vue'
+import Carousel from '@/components/Carousel.vue'
 import Nav from '@/components/Nav.vue'
 import Footer from '@/components/Footer.vue'
 
@@ -24,7 +24,7 @@ export default {
   components: {
     Jumbotron,
     ImageSection,
-    BVCarousel,
+    Carousel,
     Nav,
     Footer
   }

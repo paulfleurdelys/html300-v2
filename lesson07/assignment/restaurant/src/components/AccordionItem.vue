@@ -1,4 +1,5 @@
 <template>
+  <!-- AccordionItem populates the bootstrap accordion card template with props-->
   <div class="card">
     <div class="card-header">
       <h2 class="mb-0">

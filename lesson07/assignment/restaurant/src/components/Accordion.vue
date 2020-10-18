@@ -1,5 +1,5 @@
 <template>
-  <!-- Accordion with text changed to dark-->
+  <!-- Accordion component uses a v-for loop to create the AccordionItem components, binds collapsetarget and datatarget to make the accordion open each item correctly-->
   <div class="accordion" id="accordionExample">
     <AccordionItem v-for="item in items" 
     v-bind:key="item.id"
